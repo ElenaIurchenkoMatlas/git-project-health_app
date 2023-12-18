@@ -1,0 +1,15 @@
+class PartyAnimal:  # this is a class 
+    x = 0
+
+def party(self): # this is a method, because inside of class
+    self.x = self.x + 1
+    print("So far", self.x)
+
+an = PartyAnimal() # object inside a method
+
+an.party() #run the code, like call a funktion
+
+
+
+
+

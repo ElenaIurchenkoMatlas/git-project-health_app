@@ -1,0 +1,38 @@
+earth_metals = ["Beryllium", "Magnesium", "Calcium", "Srtontium", "Barium", "Radium"]
+earth_metals.sort()
+print(earth_metals)
+
+earth_metals.sort(reverse=True)
+print(earth_metals)
+
+# help(list.sort)  - sort(self, /, *, key=None, reverse=False)
+
+planets = [
+    ("Mercury", 2440, 5.43, 0.395),
+    ("Venus", 6052, 48.685, 0.723),
+    ("Earth", 6371, 59.725, 1.000),
+    ("Mars", 3389, 6.417, 1.524),
+    ("Jupiter", 69911, 1898, 5.203),
+    ("Saturn", 58232, 568, 9.537),
+    ("Uranus", 25362, 86.8, 19.191),
+    ("Neptune", 24622, 102, 30.05)]
+#the function should return the second value as a tuple
+size = lambda planet: planet[1]
+planets.sort(key=size, reverse=True )
+print(planets)
+
+destiny = lambda planet: planet[2]
+planets.sort(key=destiny)
+print(planets)
+
+#sort method change the list, but sorted not
+
+earth_metals = ["Beryllium", "Magnesium", "Calcium", "Srtontium", "Barium", "Radium"]
+sorted_earth_metals = sorted(earth_metals)
+print(sorted_earth_metals)
+
+#tuples can be sorted in a sorted function
+data = (7,2,9,11,4,8,13,5,1) # this is a tuple
+sorted(data)
+print(sorted(data)) #comes out as a sorted list with sorted function
+

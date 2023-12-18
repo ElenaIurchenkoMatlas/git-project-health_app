@@ -1,0 +1,19 @@
+my_list = ["apples", "pears", "oranges", "fruits"]
+
+#Way 1 to get number and the element of the list
+count = 0
+for elements in my_list:
+    print(elements)
+    if count == 1:
+        print("Count is 1")
+    count += 1
+
+#Way2
+for x in range(len(my_list)):
+    print(my_list[x])
+    if x == 1:
+        print("X is 1")    
+
+#Way 3
+for x, element in enumerate(my_list):
+    print(x, element)

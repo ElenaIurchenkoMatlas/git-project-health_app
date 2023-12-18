@@ -1,0 +1,61 @@
+s1 = set([1,2,3,4,5]) # or s1 = {1,2,3,4,5}
+print(s1)
+
+s2 = set() #empty set not with curly brackets
+s1.add(6) # just for adding one value
+s2.add(8)
+print(s1)
+print(s2)
+
+s1.update([7,9,10]) # update uor set with many values
+print(s1)
+s1.update([12,11], s2)
+print(s1)
+
+s1.remove(1) # removes a value, if its exist, if not it gives an error
+print(s1)
+
+s1.discard(2)
+print(s1)
+s1.discard(15) # if the value is not in the set, it gives no error
+print(s1)
+
+#intersection method 
+s4 = {1,2,3}
+s5 = {2,3,4}
+s6 = {3,4,5}
+
+s7 = s4.intersection(s5) # gives me all the values that are in s5 but also in s4
+print(s7)
+s8 = s4.intersection(s5,s6)
+print(s8)
+
+s9 = s4.difference(s5) # prints all the values that are in s4 but not in s5 
+print(s9)
+
+s10 = s4.symmetric_difference(s5) # prints all the values that are not the same in s4 and s5
+print(s10)
+
+"""
+
+"""
+l1 = [1,2,3,1,2,3] # we want the duplicates removed
+l2 = set(l1)
+print(l2) # removes all the duplicate
+l2 = list(set(l1)) # removes the duplicates and set it to the list again
+print(l2)
+
+#Lists and Set Task
+employees = ["Corey", "Jim", "Steven", "April", "Judy", "Jenn", "John", "Jane"]
+gym_members = ["April", "John", "Corey"]
+developers = ["Judy", "Corey", "Steven", "Jane", "April"]
+
+result = set(gym_members).intersection(developers)
+print(result) # shows all the employees that goes to gym and are developers
+
+result2 = set(employees).difference(gym_members, developers) # employeers that are not in gym and are not developers
+print(result2)
+
+O(n) for list # big O notation stuff, have to scan all the list before to find a value
+O(1) for a set # in set dont need to scan all the set and more efficient
+#https://youtu.be/r3R3h5ly_8g?si=T4esmsYFRj6E2ubu4
